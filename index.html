@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Project</title>
+    <link rel="stylesheet" href="output.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Bitcount+Single+Ink:wght@100..900&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <div id="main">
+        <!--navbar-->
+        <div id="navbar" class= "w-full h-18 px-3 py-1 flex items-center justify-between">
+            <div id="navbar-l" class="flex items-center gap-1.5 flex-1">
+                <img class="w-12" src="assets/asset 0.png">
+                <h1 class="font-bold text-2xl">ToDesktop</h1>
+            </div>
+            <div id="nav-menu" class="hidden lg:flex items-center gap-8 font-semibold text-lg" >
+                <a href="#" class="hover:text-gray-600">Pricing</a>
+                <a href="#" class="hover:text-gray-600">Docs</a>
+                <a href="#" class="hover:text-gray-600">Changelog</a>
+                <a href="#" class="hover:text-gray-600">Blog</a>
+                <a href="#" class="hover:text-gray-600">Login</a>
+            </div>
+            <div class="flex-1 hidden lg:flex justify-end">
+                <button id="electron" class="hidden lg:flex gap-2 items-center border border-gray-500 hover:border-gray-900 rounded-lg px-3.5 py-1.5 group">
+                    <img src="assets/asset 1.svg">
+                    <h1 class="group-hover:text-gray-600 font-medium text-lg transition">Electron Developers</h1>
+                    <i class="fa-solid fa-arrow-right text-gray-700 group-hover:translate-x-1 transition"></i>
+                </button>
+            </div>
+            <button id="navbar-r" class="lg:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-xl text-gray-700 hover:text-gray-900 transition-all duration-400 hover:scale-110"></i>
+            </button> 
+
+            <div id="nav-dialogue" class="hidden bg-white fixed z-50 left-0 top-0 bottom-0 right-0 h-screen w-screen">
+                <div id="nav-up" class="flex w-full h-18 pl-3 py-2 pr-5 items-center justify-between">
+                    <div id="navbar-left" class="flex items-center gap-1.5">
+                           <img class="w-12" src="assets/asset 0.png">
+                            <h1 class="font-bold text-2xl">ToDesktop</h1>
+                    </div>
+                    <button id="navbar-right" class="md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-x text-xl text-gray-700 hover:text-gray-900 transition-all duration-400 hover:scale-110"></i>
+                    </button> 
+                </div>
+                <div id="menu" class="flex flex-col gap-4 mb-2">
+                    <a href="#" class="hover:bg-gray-100 block rounded-lg text-xl font-medium p-3 mx-3 mt-5">Pricing</a>
+                    <a href="#" class="hover:bg-gray-100 block rounded-lg text-xl font-medium p-3 mx-3">Docs</a>
+                    <a href="#" class="hover:bg-gray-100 block rounded-lg text-xl font-medium p-3 mx-3">Changelog</a>
+                    <a href="#" class="hover:bg-gray-100 block rounded-lg text-xl font-medium p-3 mx-3">Blog</a>
+                    <a href="#" class="hover:bg-gray-100 block rounded-lg text-xl font-medium p-3 mx-3 mb-5">Login</a>                
+                </div>
+                <div class="h-[1px] w-full bg-gray-300"></div>
+                <button id="electron" class="w-full hover:bg-gray-100 rounded-lg flex gap-2 items-center m-2 p-5">
+                    <img src="assets/asset 1.svg" class="text-xl">
+                    <h1 class="font-medium text-xl">Electron Developers</h1>
+                </button>
+            </div>
+        </div>
+        <!--main-->
+        <main>
+            <!--hero section-->
+            <div id="hero" class="sm:flex flex-col min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent px-5 py-10 sm:text-center items-center sm:px-30">
+                <!--hero-container-->
+                <div id="version-text" class="bg-yellow-50 flex gap-2 items-center border border-yellow-400 w-fit rounded-lg px-3 py-1 m-2 mt-4 sm:mb-12 group shadow-sm hover:shadow-lg transition hover:-translate-y-1">
+                    <div class="bg-yellow-400 h-3 w-3 rounded-full border border-yellow-600"></div>
+                    <p class="text-yellow-600 font-medium">v0.21.1:<span class="text-yellow-900"> Find-in-page bug fixes</span></p>
+                    <i class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1"></i>
+                </div>
+                <div id="hero features" class="hidden sm:flex gap-15 items-center">
+                    <div class="flex gap-2 items-center">
+                        <i class="fa-regular fa-file-code text-gray-500"></i>
+                        <p class="text-gray-500">Code Optional</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <i class="fa-solid fa-hand-pointer text-gray-500"></i>
+                        <p class="text-gray-500">Drag & drop builder</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <i class="fa-solid fa-laptop text-gray-500"></i>
+                        <p class="text-gray-500">Windows, Mac, Linux</p>
+                    </div>
+                </div>
+                <h1 class="text-4xl sm:text-7xl mx-2 my-5 mt-15 sm:mt-13 font-semibold leading-snug sm:leading-tight text-gray-800">Web app to desktop app in minutes</h1>
+                <p class="mx-2 my-2 text-xl sm:text-2xl mb-18">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p>
+                <div id="btn-container" class="flex flex-col sm:flex-row gap-4">
+                    <button class="border bg-blue-600 hover:opacity-90 font-semibold transition rounded-lg py-3 px-9 text-lg text-white">Download now</button>
+                    <button class="border border-gray-500 hover:border-gray-950 transition bg-white font-semibold rounded-lg px-9 py-3 text-lg">Read Docs</button>
+                </div>
+
+                <!--slider-->
+                
+            </div>
+        </main>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

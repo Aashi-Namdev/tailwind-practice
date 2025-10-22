@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@theme{
+    --color-asi:#000;
+    --font-aashi:"Bitcount Single Ink", system-ui;
+}
+/* @layer base{
+    body{
+        @apply font-body;
+    }
+} */
